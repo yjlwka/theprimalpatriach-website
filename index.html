@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Sovereign Soil System | The Ground Remembers</title>
+  <link rel="stylesheet" href="./style.css" />
+  <style>
+    body { overflow-x: hidden; }
+    
+    /* Toast Animation Classes */
+    .toast-enter { opacity: 0; transform: translateY(20px); }
+    .toast-enter-active { opacity: 1; transform: translateY(0); transition: opacity 500ms ease-out, transform 500ms ease-out; }
+    .toast-exit { opacity: 1; transform: translateY(0); }
+    .toast-exit-active { opacity: 0; transform: translateY(20px); transition: opacity 500ms ease-in, transform 500ms ease-in; }
+    
+    /* Modal Animations */
+    .modal-hidden { display: none; opacity: 0; }
+    .modal-visible { display: flex; opacity: 1; transition: opacity 300ms ease-in; }
+  </style>
+</head>
+<body class="bg-[#080706] text-[#e3dfd8] font-serif antialiased text-[18px] selection:bg-[#c36934] selection:text-[#080706] min-h-screen">
+  
+  <!-- 1. The Always-Visible Sticky Navigation Bar (Affiche Ultra Importante - Deep Red) -->
+  <div class="fixed top-0 w-full z-50 bg-[#2b0909] border-b border-red-600 shadow-[0_10px_30px_rgba(220,38,38,0.15)] py-3 px-6">
+    <div class="max-w-6xl mx-auto flex justify-between items-center font-sans">
+      <div class="flex flex-col">
+        <span class="text-white font-bold tracking-widest text-sm leading-tight drop-shadow-sm">THE PRIMAL PAGE</span>
+        <span class="text-red-300 text-xs tracking-wider">FIELD EDITION 2026</span>
+      </div>
+      <a href="#pricing" class="flex items-center rounded-sm bg-[#d88c51] text-[#080706] font-bold text-sm hover:bg-[#e49b63] transition-colors divide-x divide-[#080706]/20 cursor-pointer shadow-md">
+        <span class="px-4 py-2 hidden md:block">GET FULL BUNDLE</span>
+        <span class="px-4 py-2 md:hidden">BUNDLE</span>
+        <span class="px-4 py-2">$97</span>
+      </a>
+    </div>
+  </div>
+
+  <main class="pt-24 md:pt-32">
+    
+    <!-- Hero / Authority Section (Gradient Depth) -->
+    <section class="relative w-full pt-16 pb-24 bg-gradient-to-b from-[#24130d] to-[#080706] overflow-hidden">
+      <!-- Volumetric Lighting Spotlight -->
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-[#c36934] opacity-[0.05] blur-[120px] rounded-full pointer-events-none"></div>
+      
+      <div class="relative max-w-6xl mx-auto px-6 text-center z-10">
+        <!-- Pre-title -->
+        <p class="text-center text-[#c36934] tracking-[0.3em] text-xs font-bold mb-8 uppercase font-sans drop-shadow-sm">THE ANCESTRAL OFF-GRID BLUEPRINTS</p>
+        
+        <!-- Hero Title -->
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight font-serif drop-shadow-xl">
+          <span class="text-white">Secure Your Food Supply.<br/>Protect Your </span><span class="text-red-600 drop-shadow-[0_0_15px_rgba(220,38,38,0.4)]">Joints.</span>
+        </h1>
+        
+        <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-12 leading-relaxed text-[#e3dfd8]/90 italic font-serif">
+          "Deploy 19th-century mechanical leverage to grow and preserve your own food off-the-grid, regardless of your age. Choose your structural blueprint below."
+        </p>
+        
+        <!-- Trust Badges -->
+        <div class="flex flex-wrap justify-center items-center gap-x-10 gap-y-4 text-sm font-sans">
+          <div class="flex items-center gap-2"><span class="text-[#d88c51] font-bold text-xl drop-shadow-sm">1,945+</span> <span class="text-[#e3dfd8]">Readers</span></div>
+          <div class="flex items-center gap-2"><span class="text-[#d88c51] font-bold text-xl drop-shadow-sm">99.88%</span> <span class="text-[#e3dfd8]">Satisfaction</span></div>
+          <div class="flex items-center gap-2"><span class="text-[#d88c51] font-bold text-xl drop-shadow-sm">7-DAY</span> <span class="text-[#e3dfd8]">Money-Back Guarantee</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ligne Cuivrée -->
+    <div class="w-full border-b border-[#c36934]/40"></div>
+
+    <!-- 4. 3-Tier Pricing Grid (Claire - Warm Charcoal) -->
+    <section id="pricing" class="bg-[#1e1b18] w-full py-24 shadow-[inset_0_10px_30px_rgba(0,0,0,0.6)]">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid lg:grid-cols-3 gap-8 items-stretch max-w-5xl mx-auto">
+          
+          <!-- Card 1 -->
+          <div class="bg-[#080706] border border-[#c36934]/30 p-8 flex flex-col shadow-2xl relative rounded-sm group transition-transform duration-300 hover:scale-[1.02] hover:shadow-[0_20px_40px_rgba(0,0,0,0.8)]">
+            <a href="#checkout" target="_blank" class="block overflow-hidden rounded-sm mb-6 drop-shadow-md">
+              <img src="/assets/VOLUME1-COVER.jpg" alt="Volume I: The 1850 Maraîcher Soil Matrix" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105 cursor-pointer">
+            </a>
+            <h3 class="text-2xl font-bold mb-2 text-white font-serif text-center uppercase tracking-wider">VOLUME I: THE 1850 MARAÎCHER SOIL MATRIX</h3>
+            <p class="text-center text-[#e3dfd8]/70 text-sm italic font-serif mb-6">The Thermodynamic Blueprint for High-Yield Production</p>
+            
+            <div class="flex flex-col items-center mb-6 font-serif">
+              <span class="text-gray-500 line-through text-lg mb-1 decoration-red-600">$47</span>
+              <span class="text-6xl font-bold text-[#d88c51] mb-2 drop-shadow-md">$27</span>
+              <span class="text-red-600 font-bold font-sans text-xs tracking-widest uppercase">SAVE $20 TODAY</span>
+            </div>
+            
+            <ul class="space-y-5 mb-8 flex-grow font-sans text-[15px] text-[#e3dfd8] leading-snug">
+              <li class="flex items-start gap-3">
+                <span class="text-green-500 font-bold text-lg leading-none drop-shadow-sm mt-0.5">✔</span> 
+                <span><strong class="text-[#d88c51] font-bold">25 forbidden methods</strong> for heating, cooling, pest control, water</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-green-500 font-bold text-lg leading-none drop-shadow-sm mt-0.5">✔</span> 
+                <span><strong class="text-[#d88c51] font-bold">The $300 earth tunnel</strong> system from Holmes County</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-green-500 font-bold text-lg leading-none drop-shadow-sm mt-0.5">✔</span> 
+                <span>Hexagonal, high-density grids to retain 90% moisture</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-green-500 font-bold text-lg leading-none drop-shadow-sm mt-0.5">✔</span> 
+                <span>100% free, localized organic inputs</span>
+              </li>
+            </ul>
+            <a href="#checkout" target="_blank" class="block text-center bg-[#3a5340] hover:bg-[#46634d] text-white font-bold py-5 px-4 uppercase tracking-widest transition-transform hover:scale-105 text-lg font-serif w-full shadow-lg rounded-sm mt-auto">GET VOLUME I →</a>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="bg-[#080706] border border-[#c36934]/30 p-8 flex flex-col shadow-2xl relative rounded-sm group transition-transform duration-300 hover:scale-[1.02] hover:shadow-[0_20px_40px_rgba(0,0,0,0.8)]">
+            <a href="#checkout" target="_blank" class="block overflow-hidden rounded-sm mb-6 drop-shadow-md">
+              <img src="/assets/VOLUME2-COVER.jpg" alt="Volume II: The Zero-Electricity Preservation Blueprint" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105 cursor-pointer">
+            </a>
+            <h3 class="text-2xl font-bold mb-2 text-white font-serif text-center uppercase tracking-wider">VOLUME II: THE ZERO-ELECTRICITY PRESERVATION BLUEPRINT</h3>
+            <p class="text-center text-[#e3dfd8]/70 text-sm italic font-serif mb-6">Thermal Control & Off-Grid Nutrient Stabilization</p>
+            
+            <div class="flex flex-col items-center mb-6 font-serif">
+              <span class="text-gray-500 line-through text-lg mb-1 decoration-red-600">$77</span>
+              <span class="text-6xl font-bold text-[#d88c51] mb-2 drop-shadow-md">$47</span>
+              <span class="text-red-600 font-bold font-sans text-xs tracking-widest uppercase">SAVE $30 TODAY</span>
+            </div>
+            
+            <ul class="space-y-5 mb-8 flex-grow font-sans text-[15px] text-[#e3dfd8] leading-snug">
+              <li class="flex items-start gap-3">
+                <span class="text-green-500 font-bold text-lg leading-none drop-shadow-sm mt-0.5">✔</span> 
+                <span><strong class="text-[#d88c51] font-bold">The $12-a-year soap recipe</strong> that replaces $300 of products</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-green-500 font-bold text-lg leading-none drop-shadow-sm mt-0.5">✔</span> 
+                <span><strong class="text-[#d88c51] font-bold">Calcium chloride, borax, and lime</strong> protocols</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-green-500 font-bold text-lg leading-none drop-shadow-sm mt-0.5">✔</span> 
+                <span>Stone-crock fermentation metrics for raw gut flora</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-green-500 font-bold text-lg leading-none drop-shadow-sm mt-0.5">✔</span> 
+                <span>Authentic Alpine infrastructure independent of the grid</span>
+              </li>
+            </ul>
+            <a href="#checkout" target="_blank" class="block text-center bg-[#3a5340] hover:bg-[#46634d] text-white font-bold py-5 px-4 uppercase tracking-widest transition-transform hover:scale-105 text-lg font-serif w-full shadow-lg rounded-sm mt-auto">GET VOLUME II →</a>
+          </div>
+
+          <!-- Card 3 (Highlight - Affiche Ultra Importante) -->
+          <div class="bg-[#080706] border-2 border-red-600 p-1 flex flex-col shadow-[0_0_40px_rgba(220,38,38,0.15)] relative transform lg:-translate-y-4 rounded-sm z-10 group transition-transform duration-300 hover:scale-[1.02] hover:shadow-[0_20px_50px_rgba(220,38,38,0.25)]">
+            <div class="bg-red-600 text-white text-center py-2 font-bold text-[10px] sm:text-xs uppercase tracking-widest font-sans drop-shadow-sm">
+              ★★★★★ BEST VALUE & MOST RECOMMENDED
+            </div>
+            <div class="p-7 flex flex-col flex-grow">
+              <a href="#checkout" target="_blank" class="block overflow-hidden rounded-sm mb-6 drop-shadow-md">
+                <img src="/assets/VOLUME3-COVER.png" alt="The Comprehensive Field Edition" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105 cursor-pointer">
+              </a>
+              <h3 class="text-[22px] sm:text-2xl font-bold mb-2 text-white font-serif text-center uppercase tracking-wider leading-tight">THE COMPREHENSIVE FIELD EDITION</h3>
+              <p class="text-center text-[#e3dfd8]/70 text-sm italic font-serif mb-6">The Complete Three-Volume Ancestral Library</p>
+              
+              <!-- Visual Box [ I ] + [ II ] + [ III ] like Photo 2 -->
+              <div class="border border-[#c36934]/30 rounded-sm p-3 flex justify-center items-center gap-2 sm:gap-4 mb-6 bg-[#1a110d]/50">
+                <div class="flex flex-col items-center">
+                  <span class="text-[#d88c51] font-bold text-lg">I</span>
+                  <span class="text-[#e3dfd8]/50 text-[9px] uppercase tracking-wider">AMISH</span>
+                </div>
+                <span class="text-[#c36934] text-xs">+</span>
+                <div class="flex flex-col items-center">
+                  <span class="text-[#d88c51] font-bold text-lg">II</span>
+                  <span class="text-[#e3dfd8]/50 text-[9px] uppercase tracking-wider">PANTRY</span>
+                </div>
+                <span class="text-[#c36934] text-xs">+</span>
+                <div class="flex flex-col items-center border border-[#d88c51] p-1.5 px-3 relative bg-[#d88c51]/10">
+                  <span class="absolute -top-2 bg-[#080706] text-[#d88c51] text-[8px] font-bold px-1 uppercase">Exclusive</span>
+                  <span class="text-[#d88c51] font-bold text-lg leading-none">III</span>
+                  <span class="text-[#d88c51] text-[9px] uppercase tracking-wider mt-1">FIELD</span>
+                </div>
+              </div>
+
+              <div class="flex flex-col items-center mb-6 font-serif">
+                <span class="text-gray-500 line-through text-lg mb-1 decoration-red-600">$230</span>
+                <span class="text-7xl font-bold text-[#d88c51] mb-2 drop-shadow-lg">$97</span>
+                <span class="text-red-600 font-bold font-sans text-xs tracking-widest uppercase">SAVE $133 — LIMITED TIME</span>
+              </div>
+              
+              <!-- Bonus Box redesigned -->
+              <div class="border border-[#c36934]/30 p-6 mb-8 rounded-md bg-[#16120f] shadow-inner">
+                <div class="text-center mb-5">
+                  <div class="text-[#d88c51] text-[11px] font-bold font-sans tracking-[0.2em] uppercase flex items-center justify-center gap-2">
+                    <span class="text-[#d88c51]">✦</span> BUNDLE-EXCLUSIVE BONUSES
+                  </div>
+                  <div class="text-[#d88c51] text-xs mt-2">✦</div>
+                </div>
+                
+                <div class="space-y-4">
+                  <!-- Bonus 1 -->
+                  <div class="flex items-center justify-between border-b border-[#c36934]/20 pb-4">
+                    <div class="flex items-center gap-4">
+                      <div class="bg-[#d88c51] text-[#080706] font-bold rounded-sm flex flex-col justify-center items-center w-16 py-1">
+                        <span class="text-[9px] leading-tight">BONUS</span>
+                        <span class="text-sm leading-tight">1</span>
+                      </div>
+                      <span class="text-base text-[#e3dfd8] font-sans leading-tight">Gravity Irrigation<br/>Blueprint</span>
+                    </div>
+                    <span class="text-gray-500 text-sm italic font-serif flex flex-col items-end leading-tight"><span>$67</span><span>value</span></span>
+                  </div>
+                  <!-- Bonus 2 -->
+                  <div class="flex items-center justify-between pt-1">
+                    <div class="flex items-center gap-4">
+                      <div class="bg-[#d88c51] text-[#080706] font-bold rounded-sm flex flex-col justify-center items-center w-16 py-1">
+                        <span class="text-[9px] leading-tight">BONUS</span>
+                        <span class="text-sm leading-tight">2</span>
+                      </div>
+                      <span class="text-base text-[#e3dfd8] font-sans leading-tight">Ollas Clay-Pot Metrics</span>
+                    </div>
+                    <span class="text-gray-500 text-sm italic font-serif flex flex-col items-end leading-tight"><span class="flex gap-1"><span>$29</span><span>value</span></span></span>
+                  </div>
+                </div>
+              </div>
+
+              <ul class="space-y-4 mb-8 flex-grow font-sans text-[15px] text-[#e3dfd8] leading-snug">
+                <li class="flex items-start gap-3">
+                  <span class="text-green-500 font-bold text-lg leading-none drop-shadow-sm mt-0.5">✔</span> 
+                  <span><strong class="text-[#d88c51] font-bold">Volume I + Volume II</strong> — the complete production & storage library</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-green-500 font-bold text-lg leading-none drop-shadow-sm mt-0.5">✔</span> 
+                  <span><strong class="text-[#d88c51] font-bold">Volume III Exclusive</strong> — The Joint-Safe Biomechanical Manual</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-green-500 font-bold text-lg leading-none drop-shadow-sm mt-0.5">✔</span> 
+                  <span><strong class="text-[#d88c51] font-bold">Exact 70° tool modifications</strong> to bypass sciatica & lumbar strain</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-green-500 font-bold text-lg leading-none drop-shadow-sm mt-0.5">✔</span> 
+                  <span><strong class="text-[#d88c51] font-bold">Zero physical requirements</strong> — built entirely on kinetic leverage</span>
+                </li>
+              </ul>
+
+              <a href="#checkout" target="_blank" class="block text-center bg-[#d88c51] hover:bg-[#e49b63] text-[#080706] font-bold py-5 px-2 uppercase tracking-widest transition-transform hover:scale-105 text-lg font-serif w-full shadow-lg shadow-[#d88c51]/40 rounded-sm mt-auto">GET THE FULL SYSTEM →</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Inline Countdown Timer (Placed statically) -->
+    <div class="w-full bg-[#2b0909] border-y border-red-600 shadow-[inset_0_0_50px_rgba(0,0,0,0.5),0_0_30px_rgba(220,38,38,0.2)] text-center py-10 z-10 relative">
+      <div class="text-red-200 font-sans tracking-widest font-bold text-sm md:text-base uppercase mb-2 drop-shadow-sm flex items-center justify-center gap-2">
+        <span class="text-[#d88c51]">⚠️</span> THIS PRICE EXPIRES IN
+      </div>
+      <div id="countdown-timer" class="text-[#d88c51] font-serif text-4xl md:text-5xl font-bold tracking-wider drop-shadow-[0_2px_10px_rgba(216,140,81,0.2)]">
+        23 : 40 : 54
+      </div>
+    </div>
+
+    <!-- The Biological Crisis (Gradient Depth) -->
+    <section class="relative w-full py-24 bg-gradient-to-b from-[#1a0f0a] to-[#080706] overflow-hidden">
+      <!-- Volumetric Lighting Spotlight -->
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-[#c36934] opacity-[0.03] blur-[100px] rounded-full pointer-events-none"></div>
+      
+      <div class="relative max-w-4xl mx-auto px-6 text-center z-10">
+        <h2 class="text-2xl md:text-3xl font-bold mb-8 text-white font-serif uppercase tracking-widest text-[#c36934] drop-shadow-sm">WHAT THEY BUILD — AND WHY</h2>
+        <div class="space-y-6 leading-loose text-lg font-sans text-[#e3dfd8]/90">
+          <p>
+            We are not eating the same food our grandparents ate. The modern agricultural complex has prioritized yield, shelf-life, and transportability over biological integrity.
+          </p>
+          <p>
+            Consider the data: The average US supermarket tomato today contains a mere <strong class="text-[#c36934] font-bold drop-shadow-sm">3.1mg of lycopene</strong>. In contrast, an Old-World Normandy tomato, grown using 19th-century soil matrix protocols, tests at <strong class="text-[#c36934] font-bold drop-shadow-sm">11.4mg</strong>.
+          </p>
+          <p>
+            This is not an accident. It is the mathematical outcome of synthetic fertilizers stripping the cation exchange capacity of the topsoil. The ground has been hollowed out, and with it, our physical autonomy.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ligne Cuivrée -->
+    <div class="w-full border-b border-[#c36934]/40"></div>
+
+
+    <!-- Ligne Cuivrée -->
+    <div class="w-full border-b border-[#c36934]/40"></div>
+
+    <!-- 5. Testimonial Cards (Claire - Warm Charcoal) -->
+    <section class="bg-[#1e1b18] w-full py-24 shadow-[inset_0_10px_30px_rgba(0,0,0,0.6)]">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-2xl md:text-3xl font-bold mb-12 text-center text-[#c36934] font-serif uppercase tracking-widest drop-shadow-sm">READER STORIES</h2>
+        <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div class="bg-[#080706] border border-[#c36934]/30 p-8 shadow-2xl flex flex-col justify-between rounded-sm">
+            <div>
+              <div class="text-[#d88c51] tracking-widest mb-4 text-xl">★★★★★</div>
+              <p class="italic leading-relaxed mb-6 font-serif text-sm">"The dig was the hardest day of work I’d put in since I was 30. The grocery bill going down by 40% is the easiest paycheck I'll ever earn."</p>
+            </div>
+            <p class="text-[#c36934] font-bold font-sans text-xs tracking-wider uppercase">— Daniel K., Washington</p>
+          </div>
+          <div class="bg-[#080706] border border-[#c36934]/30 p-8 shadow-2xl flex flex-col justify-between rounded-sm">
+            <div>
+              <div class="text-[#d88c51] tracking-widest mb-4 text-xl">★★★★★</div>
+              <p class="italic leading-relaxed mb-6 font-serif text-sm">"I thought my sciatica meant the end of my gardening years. The 70-degree entry spade rules in Volume II completely changed my leverage. I am back in the soil."</p>
+            </div>
+            <p class="text-[#c36934] font-bold font-sans text-xs tracking-wider uppercase">— Martha Higgins, Ohio</p>
+          </div>
+          <div class="bg-[#080706] border border-[#c36934]/30 p-8 shadow-2xl flex flex-col justify-between rounded-sm">
+            <div>
+              <div class="text-[#d88c51] tracking-widest mb-4 text-xl">★★★★★</div>
+              <p class="italic leading-relaxed mb-6 font-serif text-sm">"The non-electric preservation blueprint is worth the cost of the entire bundle. I built the damp-sand box in a weekend. True independence."</p>
+            </div>
+            <p class="text-[#c36934] font-bold font-sans text-xs tracking-wider uppercase">— Arthur T., Montana</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ligne Cuivrée -->
+    <div class="w-full border-b border-[#c36934]/40"></div>
+
+    <!-- FAQ Section -->
+    <section class="bg-[#110d0b] w-full py-24 shadow-[inset_0_10px_30px_rgba(0,0,0,0.6)]">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-[#d88c51] font-serif uppercase tracking-widest drop-shadow-sm mb-4">COMMON QUESTIONS</h2>
+          <p class="italic text-[#e3dfd8]/70 font-serif text-lg">Everything you need to know before you order</p>
+        </div>
+        
+        <div class="space-y-4">
+          <!-- FAQ Item 1 -->
+          <div class="faq-item bg-[#1a1310] border border-[#c36934]/30 rounded-sm">
+            <button class="w-full px-6 py-5 flex justify-between items-center cursor-pointer text-left focus:outline-none bg-transparent border-none">
+              <span class="font-bold text-[#e3dfd8] text-[17px] font-sans">Do these methods actually work in my climate?</span>
+              <span class="faq-icon text-[#d88c51] font-bold text-2xl leading-none font-serif">−</span>
+            </button>
+            <div class="faq-content px-6 pb-6 text-[#e3dfd8]/80 font-serif text-[15px] leading-relaxed">
+              <p>Yes. The protocols in Volume I and II are not based on weather; they are based on thermodynamics and structural biology. The 1850 Maraîcher matrix utilizes specific Carbon-to-Nitrogen ratios that generate their own sub-surface heat, while the Amish Root Cellar blueprints rely on underground temperature stabilization, which remains a constant 50-55°F (10-13°C) regardless of whether you live in Texas or Maine.</p>
+            </div>
+          </div>
+          
+          <!-- FAQ Item 2 -->
+          <div class="faq-item bg-[#1a1310] border border-[#c36934]/30 rounded-sm">
+            <button class="w-full px-6 py-5 flex justify-between items-center cursor-pointer text-left focus:outline-none bg-transparent border-none">
+              <span class="font-bold text-[#e3dfd8] text-[17px] font-sans">How long until I actually see savings on my bills?</span>
+              <span class="faq-icon text-[#d88c51] font-bold text-2xl leading-none font-serif">−</span>
+            </button>
+            <div class="faq-content px-6 pb-6 text-[#e3dfd8]/80 font-serif text-[15px] leading-relaxed">
+              <p>You will see multiple phases of savings.<br/>
+<strong class="text-[#d88c51] font-bold drop-shadow-sm">Day 1:</strong> By applying the Class-1 leverage modifications in Volume III, you instantly reduce lumbar compression by up to 80%, bypassing the need for physical therapy or joint pain medication.<br/>
+<strong class="text-[#d88c51] font-bold drop-shadow-sm">Day 30:</strong> The water-retention grids will reflect a drop in your municipal water bill, while the Water Glassing protocol allows you to bypass grocery store egg inflation immediately.<br/>
+<strong class="text-[#d88c51] font-bold drop-shadow-sm">Day 90:</strong> Once the intensive soil matrix matures, readers report a 40% to 60% reduction in their organic grocery costs.</p>
+            </div>
+          </div>
+          
+          <!-- FAQ Item 3 -->
+          <div class="faq-item bg-[#1a1310] border border-[#c36934]/30 rounded-sm">
+            <button class="w-full px-6 py-5 flex justify-between items-center cursor-pointer text-left focus:outline-none bg-transparent border-none">
+              <span class="font-bold text-[#e3dfd8] text-[17px] font-sans">What if I'm a renter or live in an apartment?</span>
+              <span class="faq-icon text-[#d88c51] font-bold text-2xl leading-none font-serif">+</span>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 text-[#e3dfd8]/80 font-serif text-[15px] leading-relaxed">
+              <p>The Volume II Preservation Blueprint (fermentation, water glassing, and indoor thermal stabilization) requires zero land and can be executed in any apartment kitchen. For Volume I, the French intensive method was historically designed for hyper-urban environments. You only need a 40-square-foot patch of dirt or a raised bed to execute the primary matrix.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="faq-item bg-[#1a1310] border border-[#c36934]/30 rounded-sm">
+            <button class="w-full px-6 py-5 flex justify-between items-center cursor-pointer text-left focus:outline-none bg-transparent border-none">
+              <span class="font-bold text-[#e3dfd8] text-[17px] font-sans">I'm in my 60s or 70s. Can I still do this?</span>
+              <span class="faq-icon text-[#d88c51] font-bold text-2xl leading-none font-serif">+</span>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 text-[#e3dfd8]/80 font-serif text-[15px] leading-relaxed">
+              <p>This system was engineered specifically for you. Volume III is exclusively dedicated to senior-friendly biomechanics. We do not ask you to rely on muscle. You will learn the 70° tool modification angles and Spartan kinetic-momentum lifting techniques to work the soil using pure leverage. If you suffer from sciatica, arthritis, or lower back degradation, this is the safest way to maintain physical autonomy.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 5 -->
+          <div class="faq-item bg-[#1a1310] border border-[#c36934]/30 rounded-sm">
+            <button class="w-full px-6 py-5 flex justify-between items-center cursor-pointer text-left focus:outline-none bg-transparent border-none">
+              <span class="font-bold text-[#e3dfd8] text-[17px] font-sans">What format are the books in? How do I access them?</span>
+              <span class="faq-icon text-[#d88c51] font-bold text-2xl leading-none font-serif">+</span>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 text-[#e3dfd8]/80 font-serif text-[15px] leading-relaxed">
+              <p>These are digital field manuals (PDF format). The moment your order is securely processed, you will receive an instant download link directly to your email. You can read them on your smartphone, tablet, computer, or print out the blueprints to take directly into the field.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0a0705] w-full py-16 border-t border-[#c36934]/20 text-center">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-2xl md:text-3xl font-serif text-[#d88c51] tracking-[0.2em] uppercase mb-4 drop-shadow-sm">THE PRIMAL PATRIARCH</h2>
+        <p class="text-[#c36934] font-sans text-sm tracking-widest mb-8">THE COMPLETE THREE-VOLUME Ancestral Library - 2026</p>
+        <p class="text-gray-500 font-sans text-xs leading-relaxed max-w-2xl mx-auto mb-6">
+          Educational content based on documented traditional methods. Individual results vary based on climate, home characteristics, and implementation. Not financial or professional advice.
+        </p>
+        <p class="text-gray-400 font-sans text-sm">
+          Questions? <a href="#" class="text-[#d88c51] hover:text-[#e49b63] transition-colors font-bold">contact us</a>
+        </p>
+      </div>
+    </footer>
+
+  </main>
+
+
+  <!-- 3. Social Proof Toast Container -->
+  <div id="toast-container" class="fixed bottom-24 md:bottom-28 left-6 z-50 flex flex-col gap-3 pointer-events-none"></div>
+
+  <!-- 6. Exit-Intent Modal -->
+  <div id="exit-modal" class="fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm modal-hidden items-center justify-center p-4">
+    <div class="bg-[#1e1b18] border-2 border-red-600 max-w-lg w-full p-8 md:p-12 shadow-[0_0_50px_rgba(220,38,38,0.2)] relative rounded-sm">
+      <button id="close-modal" class="absolute top-4 right-4 text-gray-500 hover:text-white text-3xl leading-none cursor-pointer">&times;</button>
+      
+      <h2 class="text-2xl md:text-3xl font-bold mb-4 text-red-600 uppercase leading-tight font-serif drop-shadow-sm">STILL DECIDING?<br/>NOT READY FOR THE FULL BUNDLE? START SMALL.</h2>
+      <p class="text-lg text-[#e3dfd8] mb-8 leading-relaxed font-sans text-base">
+        You don't need to commit to all three volumes today. The Maraîcher Blueprint alone contains the 1850 soil matrix and the $15 fertilizer hack.
+      </p>
+      
+      <div class="flex flex-col gap-4 items-center">
+        <a href="#checkout" target="_blank" class="w-full block text-center bg-[#3a5340] hover:bg-[#46634d] text-white font-bold py-5 px-4 uppercase tracking-widest transition-transform hover:scale-105 text-lg font-serif shadow-lg cursor-pointer rounded-sm">
+          GET VOLUME 1 ONLY — $27
+        </a>
+        <button id="close-modal-btn" class="text-gray-400 hover:text-white text-sm font-sans underline underline-offset-4 mt-2 cursor-pointer bg-transparent border-none">
+          No thanks, I'll keep browsing
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      
+      // Countdown Timer Logic
+      const timerEl = document.getElementById('countdown-timer');
+      let hours = 23;
+      let minutes = 40;
+      let seconds = 54;
+
+      setInterval(() => {
+        if(seconds > 0) {
+          seconds--;
+        } else {
+          seconds = 59;
+          if(minutes > 0) {
+            minutes--;
+          } else {
+            minutes = 59;
+            if(hours > 0) {
+              hours--;
+            }
+          }
+        }
+        
+        const h = hours.toString().padStart(2, '0');
+        const m = minutes.toString().padStart(2, '0');
+        const s = seconds.toString().padStart(2, '0');
+        timerEl.textContent = `${h} : ${m} : ${s}`;
+      }, 1000);
+
+      // Social Proof Toast Logic
+      const toastData = [
+        { name: "Barbara", state: "Albuquerque, NM", item: "The Sovereign Bundle" },
+        { name: "Robert", state: "Montana", item: "The Sovereign Bundle" },
+        { name: "James", state: "Ohio", item: "The Maraîcher Blueprint" },
+        { name: "Michael", state: "Texas", item: "The Sovereign Bundle" },
+        { name: "William", state: "Florida", item: "Joint-Safe Mechanics" },
+        { name: "Thomas", state: "Idaho", item: "The Sovereign Bundle" },
+        { name: "David", state: "Wyoming", item: "The Sovereign Bundle" }
+      ];
+
+      const toastContainer = document.getElementById("toast-container");
+
+      function createToast(data) {
+        const toast = document.createElement("div");
+        toast.className = "bg-[#1e1b18] border-l-4 border-[#3a5340] shadow-2xl shadow-black/80 px-4 py-4 flex items-center gap-4 font-sans w-80 toast-enter pointer-events-auto rounded-sm";
+        
+        const initial = data.name.charAt(0);
+        const timeAgo = Math.floor(Math.random() * 45) + 2; 
+        
+        toast.innerHTML = `
+          <div class="flex-shrink-0 w-12 h-12 bg-[#c36934] rounded-full flex items-center justify-center text-[#080706] font-serif font-bold text-2xl border-2 border-[#080706]">
+            ${initial}
+          </div>
+          <div class="flex flex-col">
+            <span class="font-bold text-[#e3dfd8] text-sm leading-tight">${data.name} from ${data.state}</span>
+            <span class="text-gray-400 text-[13px] mt-1">just got <span class="text-red-400 font-semibold">${data.item}</span></span>
+            <span class="text-gray-500 text-[10px] mt-1 uppercase tracking-wider">${timeAgo} minutes ago</span>
+          </div>
+        `;
+
+        toastContainer.appendChild(toast);
+
+        requestAnimationFrame(() => {
+          toast.classList.remove("toast-enter");
+          toast.classList.add("toast-enter-active");
+        });
+
+        setTimeout(() => {
+          toast.classList.remove("toast-enter-active");
+          toast.classList.add("toast-exit");
+          
+          requestAnimationFrame(() => {
+            toast.classList.add("toast-exit-active");
+            setTimeout(() => { toast.remove(); }, 500);
+          });
+        }, 6000); 
+      }
+
+      function showRandomToast() {
+        const randomData = toastData[Math.floor(Math.random() * toastData.length)];
+        createToast(randomData);
+        const nextTime = Math.floor(Math.random() * (20000 - 12000 + 1) + 12000);
+        setTimeout(showRandomToast, nextTime);
+      }
+      setTimeout(showRandomToast, 2000); 
+
+      // Exit-Intent Modal Logic
+      const modal = document.getElementById('exit-modal');
+      const closeModal = document.getElementById('close-modal');
+      const closeBtn = document.getElementById('close-modal-btn');
+      let modalTriggered = false;
+
+      function triggerModal() {
+        if(modalTriggered) return;
+        modalTriggered = true;
+        modal.classList.remove('modal-hidden');
+        // Force reflow
+        void modal.offsetWidth;
+        modal.classList.add('modal-visible');
+      }
+
+      function hideModal() {
+        modal.classList.remove('modal-visible');
+        setTimeout(() => { modal.classList.add('modal-hidden'); }, 300);
+      }
+
+      closeModal.addEventListener('click', hideModal);
+      closeBtn.addEventListener('click', hideModal);
+
+      // FAQ Accordion Logic
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(item => {
+        const button = item.querySelector('button');
+        const content = item.querySelector('.faq-content');
+        const icon = item.querySelector('.faq-icon');
+        
+        button.addEventListener('click', () => {
+          const isOpen = !content.classList.contains('hidden');
+          
+          if (isOpen) {
+            content.classList.add('hidden');
+            icon.textContent = '+';
+          } else {
+            content.classList.remove('hidden');
+            icon.textContent = '−';
+          }
+        });
+      });
+
+      // Trigger on mouse leave top window
+      document.addEventListener('mouseleave', (e) => {
+        if (e.clientY <= 0) {
+          triggerModal();
+        }
+      });
+
+      // Trigger after 60 seconds
+      setTimeout(() => {
+        triggerModal();
+      }, 60000);
+
+    });
+  </script>
+</body>
+</html>
