@@ -519,9 +519,15 @@
       const closeModal = document.getElementById('close-modal');
       const closeBtn = document.getElementById('close-modal-btn');
       let modalTriggered = false;
+      let canTriggerExit = false;
+
+      // Allow exit intent only after 10 seconds of browsing to avoid instant popups
+      setTimeout(() => {
+        canTriggerExit = true;
+      }, 10000);
 
       function triggerModal() {
-        if(modalTriggered) return;
+        if(modalTriggered || !canTriggerExit) return;
         modalTriggered = true;
         modal.classList.remove('modal-hidden');
         // Force reflow
@@ -564,10 +570,7 @@
         }
       });
 
-      // Trigger after 60 seconds
-      setTimeout(() => {
-        triggerModal();
-      }, 60000);
+
 
     });
   </script>
