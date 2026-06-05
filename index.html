@@ -19,7 +19,13 @@
     .modal-visible { display: flex; opacity: 1; transition: opacity 300ms ease-in; }
   </style>
 </head>
-<body class="bg-[#080706] text-[#e3dfd8] font-serif antialiased text-[18px] selection:bg-[#c36934] selection:text-[#080706] min-h-screen">
+<body class="text-[#e3dfd8] font-serif antialiased text-[18px] selection:bg-[#c36934] selection:text-[#080706] min-h-screen relative">
+  <!-- Cinematic Background (Glow + Noise) -->
+  <div class="fixed inset-0 z-[-1] pointer-events-none bg-[#0a0503]">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_0%,rgba(195,105,52,0.18),transparent_50%),radial-gradient(circle_at_80%_80%,rgba(220,38,38,0.12),transparent_50%)]"></div>
+    <div class="absolute inset-0 opacity-[0.05]" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noiseFilter\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.85\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noiseFilter)\'/%3E%3C/svg%3E');"></div>
+  </div>
+
   
   <!-- 1. The Always-Visible Sticky Navigation Bar (Affiche Ultra Importante - Deep Red) -->
   <div class="fixed top-0 w-full z-50 bg-[#2b0909] border-b border-red-600 shadow-[0_10px_30px_rgba(220,38,38,0.15)] py-3 px-6">
@@ -39,7 +45,7 @@
   <main class="pt-24 md:pt-32">
     
     <!-- Hero / Authority Section (Gradient Depth) -->
-    <section class="relative w-full pt-16 pb-24 bg-gradient-to-b from-[#24130d] to-[#080706] overflow-hidden">
+    <section class="relative w-full pt-16 pb-24 bg-transparent overflow-hidden">
       <!-- Volumetric Lighting Spotlight -->
       <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-[#c36934] opacity-[0.05] blur-[120px] rounded-full pointer-events-none"></div>
       
@@ -69,7 +75,7 @@
     <div class="w-full border-b border-[#c36934]/40"></div>
 
     <!-- 4. 3-Tier Pricing Grid (Claire - Warm Charcoal) -->
-    <section id="pricing" class="bg-[#1e1b18] w-full py-24 shadow-[inset_0_10px_30px_rgba(0,0,0,0.6)]">
+    <section id="pricing" class="bg-[#1e1b18]/40 w-full py-24 backdrop-blur-md">
       <div class="max-w-6xl mx-auto px-6">
         <div class="grid lg:grid-cols-3 gap-8 items-stretch max-w-5xl mx-auto">
           
@@ -181,7 +187,7 @@
               </div>
               
               <!-- Bonus Box redesigned -->
-              <div class="border border-[#c36934]/30 p-6 mb-8 rounded-md bg-[#16120f] shadow-inner">
+              <div class="border border-[#c36934]/40 p-6 mb-8 rounded-md bg-[#c36934]/5 shadow-inner">
                 <div class="text-center mb-5">
                   <div class="text-[#d88c51] text-[11px] font-bold font-sans tracking-[0.2em] uppercase flex items-center justify-center gap-2">
                     <span class="text-[#d88c51]">✦</span> BUNDLE-EXCLUSIVE BONUSES
@@ -243,7 +249,7 @@
     </section>
 
     <!-- Inline Countdown Timer (Placed statically) -->
-    <div class="w-full bg-[#2b0909] border-y border-red-600 shadow-[inset_0_0_50px_rgba(0,0,0,0.5),0_0_30px_rgba(220,38,38,0.2)] text-center py-10 z-10 relative">
+    <div class="w-full bg-[#2b0909]/80 backdrop-blur-md border-y border-red-600/80 shadow-[inset_0_0_50px_rgba(0,0,0,0.5),0_0_40px_rgba(220,38,38,0.3)] text-center py-10 z-10 relative">
       <div class="text-red-200 font-sans tracking-widest font-bold text-sm md:text-base uppercase mb-2 drop-shadow-sm flex items-center justify-center gap-2">
         <span class="text-[#d88c51]">⚠️</span> THIS PRICE EXPIRES IN
       </div>
@@ -253,7 +259,7 @@
     </div>
 
     <!-- The Biological Crisis (Gradient Depth) -->
-    <section class="relative w-full py-24 bg-gradient-to-b from-[#1a0f0a] to-[#080706] overflow-hidden">
+    <section class="relative w-full py-24 bg-black/30 backdrop-blur-sm overflow-hidden">
       <!-- Volumetric Lighting Spotlight -->
       <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-[#c36934] opacity-[0.03] blur-[100px] rounded-full pointer-events-none"></div>
       
@@ -281,25 +287,25 @@
     <div class="w-full border-b border-[#c36934]/40"></div>
 
     <!-- 5. Testimonial Cards (Claire - Warm Charcoal) -->
-    <section class="bg-[#1e1b18] w-full py-24 shadow-[inset_0_10px_30px_rgba(0,0,0,0.6)]">
+    <section class="bg-[#1e1b18]/40 w-full py-24 backdrop-blur-md">
       <div class="max-w-6xl mx-auto px-6">
         <h2 class="text-2xl md:text-3xl font-bold mb-12 text-center text-[#c36934] font-serif uppercase tracking-widest drop-shadow-sm">READER STORIES</h2>
         <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          <div class="bg-[#080706] border border-[#c36934]/30 p-8 shadow-2xl flex flex-col justify-between rounded-sm">
+          <div class="bg-black/40 backdrop-blur-md border border-[#c36934]/20 p-8 shadow-2xl flex flex-col justify-between rounded-sm hover:border-[#c36934]/40 transition-colors">
             <div>
               <div class="text-[#d88c51] tracking-widest mb-4 text-xl">★★★★★</div>
               <p class="italic leading-relaxed mb-6 font-serif text-sm">"The dig was the hardest day of work I’d put in since I was 30. The grocery bill going down by 40% is the easiest paycheck I'll ever earn."</p>
             </div>
             <p class="text-[#c36934] font-bold font-sans text-xs tracking-wider uppercase">— Daniel K., Washington</p>
           </div>
-          <div class="bg-[#080706] border border-[#c36934]/30 p-8 shadow-2xl flex flex-col justify-between rounded-sm">
+          <div class="bg-black/40 backdrop-blur-md border border-[#c36934]/20 p-8 shadow-2xl flex flex-col justify-between rounded-sm hover:border-[#c36934]/40 transition-colors">
             <div>
               <div class="text-[#d88c51] tracking-widest mb-4 text-xl">★★★★★</div>
               <p class="italic leading-relaxed mb-6 font-serif text-sm">"I thought my sciatica meant the end of my gardening years. The 70-degree entry spade rules in Volume II completely changed my leverage. I am back in the soil."</p>
             </div>
             <p class="text-[#c36934] font-bold font-sans text-xs tracking-wider uppercase">— Martha Higgins, Ohio</p>
           </div>
-          <div class="bg-[#080706] border border-[#c36934]/30 p-8 shadow-2xl flex flex-col justify-between rounded-sm">
+          <div class="bg-black/40 backdrop-blur-md border border-[#c36934]/20 p-8 shadow-2xl flex flex-col justify-between rounded-sm hover:border-[#c36934]/40 transition-colors">
             <div>
               <div class="text-[#d88c51] tracking-widest mb-4 text-xl">★★★★★</div>
               <p class="italic leading-relaxed mb-6 font-serif text-sm">"The non-electric preservation blueprint is worth the cost of the entire bundle. I built the damp-sand box in a weekend. True independence."</p>
@@ -314,7 +320,7 @@
     <div class="w-full border-b border-[#c36934]/40"></div>
 
     <!-- FAQ Section -->
-    <section class="bg-[#110d0b] w-full py-24 shadow-[inset_0_10px_30px_rgba(0,0,0,0.6)]">
+    <section class="bg-[#110d0b]/40 w-full py-24 backdrop-blur-md">
       <div class="max-w-4xl mx-auto px-6">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-bold text-[#d88c51] font-serif uppercase tracking-widest drop-shadow-sm mb-4">COMMON QUESTIONS</h2>
@@ -323,7 +329,7 @@
         
         <div class="space-y-4">
           <!-- FAQ Item 1 -->
-          <div class="faq-item bg-[#1a1310] border border-[#c36934]/30 rounded-sm">
+          <div class="faq-item bg-black/40 backdrop-blur-sm border border-[#c36934]/20 hover:border-[#c36934]/40 transition-colors rounded-sm">
             <button class="w-full px-6 py-5 flex justify-between items-center cursor-pointer text-left focus:outline-none bg-transparent border-none">
               <span class="font-bold text-[#e3dfd8] text-[17px] font-sans">Do these methods actually work in my climate?</span>
               <span class="faq-icon text-[#d88c51] font-bold text-2xl leading-none font-serif">−</span>
@@ -334,7 +340,7 @@
           </div>
           
           <!-- FAQ Item 2 -->
-          <div class="faq-item bg-[#1a1310] border border-[#c36934]/30 rounded-sm">
+          <div class="faq-item bg-black/40 backdrop-blur-sm border border-[#c36934]/20 hover:border-[#c36934]/40 transition-colors rounded-sm">
             <button class="w-full px-6 py-5 flex justify-between items-center cursor-pointer text-left focus:outline-none bg-transparent border-none">
               <span class="font-bold text-[#e3dfd8] text-[17px] font-sans">How long until I actually see savings on my bills?</span>
               <span class="faq-icon text-[#d88c51] font-bold text-2xl leading-none font-serif">−</span>
@@ -348,7 +354,7 @@
           </div>
           
           <!-- FAQ Item 3 -->
-          <div class="faq-item bg-[#1a1310] border border-[#c36934]/30 rounded-sm">
+          <div class="faq-item bg-black/40 backdrop-blur-sm border border-[#c36934]/20 hover:border-[#c36934]/40 transition-colors rounded-sm">
             <button class="w-full px-6 py-5 flex justify-between items-center cursor-pointer text-left focus:outline-none bg-transparent border-none">
               <span class="font-bold text-[#e3dfd8] text-[17px] font-sans">What if I'm a renter or live in an apartment?</span>
               <span class="faq-icon text-[#d88c51] font-bold text-2xl leading-none font-serif">+</span>
@@ -359,7 +365,7 @@
           </div>
 
           <!-- FAQ Item 4 -->
-          <div class="faq-item bg-[#1a1310] border border-[#c36934]/30 rounded-sm">
+          <div class="faq-item bg-black/40 backdrop-blur-sm border border-[#c36934]/20 hover:border-[#c36934]/40 transition-colors rounded-sm">
             <button class="w-full px-6 py-5 flex justify-between items-center cursor-pointer text-left focus:outline-none bg-transparent border-none">
               <span class="font-bold text-[#e3dfd8] text-[17px] font-sans">I'm in my 60s or 70s. Can I still do this?</span>
               <span class="faq-icon text-[#d88c51] font-bold text-2xl leading-none font-serif">+</span>
@@ -370,7 +376,7 @@
           </div>
 
           <!-- FAQ Item 5 -->
-          <div class="faq-item bg-[#1a1310] border border-[#c36934]/30 rounded-sm">
+          <div class="faq-item bg-black/40 backdrop-blur-sm border border-[#c36934]/20 hover:border-[#c36934]/40 transition-colors rounded-sm">
             <button class="w-full px-6 py-5 flex justify-between items-center cursor-pointer text-left focus:outline-none bg-transparent border-none">
               <span class="font-bold text-[#e3dfd8] text-[17px] font-sans">What format are the books in? How do I access them?</span>
               <span class="faq-icon text-[#d88c51] font-bold text-2xl leading-none font-serif">+</span>
@@ -385,7 +391,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#0a0705] w-full py-16 border-t border-[#c36934]/20 text-center">
+    <footer class="bg-black/40 backdrop-blur-lg w-full py-16 border-t border-[#c36934]/20 text-center">
       <div class="max-w-4xl mx-auto px-6">
         <h2 class="text-2xl md:text-3xl font-serif text-[#d88c51] tracking-[0.2em] uppercase mb-4 drop-shadow-sm">THE PRIMAL PATRIARCH</h2>
         <p class="text-[#c36934] font-sans text-sm tracking-widest mb-8">THE COMPLETE THREE-VOLUME Ancestral Library - 2026</p>
