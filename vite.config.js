@@ -11,7 +11,8 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         download: resolve(__dirname, 'download-access-7f9a2d.html'),
-        bundle: resolve(__dirname, 'index_bundle.html')
+        bundle: resolve(__dirname, 'index_bundle.html'),
+        contact: resolve(__dirname, 'contact.html')
       }
     }
   }

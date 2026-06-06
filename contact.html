@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | The Primal Patriarch</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body class="text-[#e3dfd8] font-serif antialiased text-[18px] selection:bg-[#c36934] selection:text-[#080706] min-h-screen relative flex flex-col">
+  
+  <!-- Cinematic Background (Glow + Noise) -->
+  <div class="fixed inset-0 z-[-1] pointer-events-none bg-[#0a0503]">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_0%,rgba(195,105,52,0.18),transparent_50%),radial-gradient(circle_at_80%_80%,rgba(220,38,38,0.12),transparent_50%)]"></div>
+    <div class="absolute inset-0 opacity-[0.05]" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=\\'0 0 200 200\\' xmlns=\\'http://www.w3.org/2000/svg\\'%3E%3Cfilter id=\\'noiseFilter\\'%3E%3CfeTurbulence type=\\'fractalNoise\\' baseFrequency=\\'0.85\\' numOctaves=\\'3\\' stitchTiles=\\'stitch\\'/%3E%3C/filter%3E%3Crect width=\\'100%25\\' height=\\'100%25\\' filter=\\'url(%23noiseFilter)\\'/%3E%3C/svg%3E');"></div>
+  </div>
+
+  <!-- Header -->
+  <div class="fixed top-0 w-full z-50 bg-[#2b0909] border-b border-red-600 shadow-[0_10px_30px_rgba(220,38,38,0.15)] py-3 px-6">
+    <div class="max-w-6xl mx-auto flex justify-between items-center font-sans">
+      <div class="flex flex-col">
+        <a href="/" class="text-white font-bold tracking-widest text-sm leading-tight drop-shadow-sm hover:text-[#d88c51] transition-colors">THE PRIMAL PAGE</a>
+        <span class="text-red-300 text-xs tracking-wider">FIELD EDITION 2026</span>
+      </div>
+      <a href="/" class="text-[#d88c51] text-xs font-bold uppercase hover:text-white transition-colors tracking-widest">
+        ← BACK TO HOME
+      </a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="flex-grow flex items-center justify-center pt-32 pb-24 px-6 relative z-10">
+    <div class="max-w-xl w-full">
+      <div class="text-center mb-10">
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 font-serif drop-shadow-md uppercase tracking-wide">Contact <span class="text-[#c36934]">Us</span></h1>
+        <div class="w-16 h-1 bg-red-600 mx-auto rounded-full mb-4"></div>
+        <p class="text-[#e3dfd8]/80 text-lg">Have a question or a problem with your order? Send us a message below and we will respond as soon as possible.</p>
+      </div>
+
+      <!-- Glassmorphic Form Card -->
+      <div class="bg-[#080706]/60 border border-[#c36934]/30 p-8 md:p-10 shadow-[0_0_40px_rgba(216,140,81,0.15)] relative rounded-sm backdrop-blur-md">
+        <form action="https://formsubmit.co/cxombowayyg@hotmail.com" method="POST" class="space-y-6 font-sans">
+          
+          <!-- Hidden Fields for Formsubmit Config -->
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://theprimalpatriach-website.vercel.app">
+          <input type="hidden" name="_subject" value="New Contact Message from Primal Patriarch Website">
+
+          <div>
+            <label for="name" class="block text-sm font-bold text-[#e3dfd8] uppercase tracking-widest mb-2">Your Name</label>
+            <input type="text" id="name" name="name" required class="w-full bg-black/40 border border-[#c36934]/30 rounded-sm px-4 py-3 text-white focus:outline-none focus:border-[#d88c51] transition-colors placeholder-gray-600" placeholder="John Doe">
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-bold text-[#e3dfd8] uppercase tracking-widest mb-2">Your Email</label>
+            <input type="email" id="email" name="email" required class="w-full bg-black/40 border border-[#c36934]/30 rounded-sm px-4 py-3 text-white focus:outline-none focus:border-[#d88c51] transition-colors placeholder-gray-600" placeholder="john@example.com">
+          </div>
+
+          <div>
+            <label for="message" class="block text-sm font-bold text-[#e3dfd8] uppercase tracking-widest mb-2">Message</label>
+            <textarea id="message" name="message" rows="5" required class="w-full bg-black/40 border border-[#c36934]/30 rounded-sm px-4 py-3 text-white focus:outline-none focus:border-[#d88c51] transition-colors placeholder-gray-600 resize-y" placeholder="How can we help you?"></textarea>
+          </div>
+
+          <button type="submit" class="w-full bg-[#d88c51] hover:bg-[#e49b63] text-[#080706] font-bold py-4 px-8 uppercase tracking-widest transition-transform hover:scale-105 text-lg font-serif shadow-[0_0_20px_rgba(216,140,81,0.4)] rounded-sm mt-4">
+            SEND MESSAGE
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black/40 backdrop-blur-lg border-t border-[#c36934]/20 py-8 relative z-10 w-full mt-auto">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <p class="text-[#e3dfd8]/50 text-sm font-sans mb-2">© 2026 THE PRIMAL PATRIARCH. ALL RIGHTS RESERVED.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
